@@ -1,0 +1,84 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.videos {
+    margin-top: 20px;
+}
+
+.video {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de las rosas */
+#rosas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no interfiera con los clics */
+    overflow: hidden;
+    z-index: 999; /* Asegura que esté encima de todo */
+}
+
+/* Animación de las rosas */
+.rosa {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: flotar 10s linear infinite;
+    opacity: 0;
+}
+
+/* Animación de flotación */
+@keyframes flotar {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
